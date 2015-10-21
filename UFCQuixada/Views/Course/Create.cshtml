@@ -1,10 +1,10 @@
 ﻿@model UFCQuixada.Models.Course
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Cadastrar";
 }
 
-<h2>Create</h2>
+<h2>Cadastrar</h2>
 
 
 @using (Html.BeginForm()) 
@@ -41,6 +41,7 @@
         </div>
 
         <div class="form-group">
+            @*@Html.LabelFor(model => model.DepartmentID, "DepartmentID", new { @class = "control-label col-md-2" })*@
             @Html.LabelFor(model => model.DepartmentID, "DepartmentID", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("DepartmentID", String.Empty)
@@ -57,7 +58,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar", "Index")
 </div>
 
 @section Scripts {
